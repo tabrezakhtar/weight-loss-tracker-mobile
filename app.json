@@ -1,12 +1,17 @@
 {
   "expo": {
-    "name": "weight-loss-tracker-mobile",
+    "name": "Simple Weight Loss Tracker",
     "slug": "weight-loss-tracker-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
     "scheme": "weightlosstrackermobile",
     "userInterfaceStyle": "automatic",
+    "splash": {
+      "image": "./assets/images/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#4CAF50"
+    },
     "newArchEnabled": true,
     "ios": {
       "supportsTablet": true
@@ -33,9 +38,10 @@
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "#4CAF50",
           "dark": {
-            "backgroundColor": "#000000"
+            "image": "./assets/images/splash-icon.png",
+            "backgroundColor": "#2E7D32"
           }
         }
       ]

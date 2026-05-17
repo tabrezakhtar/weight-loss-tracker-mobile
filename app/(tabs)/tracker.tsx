@@ -1,19 +1,19 @@
 import { StyleSheet, View } from 'react-native';
-import { Button, Card, Text } from 'react-native-paper';
+import { Card, Text } from 'react-native-paper';
 
-export default function HomeScreen() {
+export default function TrackerScreen() {
   return (
     <View style={styles.container}>
       <Card style={styles.card}>
         <Card.Content>
+          <Text variant="headlineMedium" style={styles.title}>
+            Tracker
+          </Text>
           <Text variant="bodyMedium">
-            Welcome to your Weight Loss Tracker app!
+            Track your weight progress here.
           </Text>
         </Card.Content>
       </Card>
-      <Button mode="contained" style={styles.button}>
-        Get Started
-      </Button>
     </View>
   );
 }
@@ -29,8 +29,5 @@ const styles = StyleSheet.create({
   },
   title: {
     marginBottom: 8,
-  },
-  button: {
-    marginTop: 8,
   },
 });

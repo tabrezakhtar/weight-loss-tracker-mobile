@@ -2,13 +2,14 @@ import { DrawerActions } from '@react-navigation/native';
 import { useNavigation, useRouter } from 'expo-router';
 import { StyleSheet, View } from 'react-native';
 import { Appbar, Card, Text } from 'react-native-paper';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function AboutScreen() {
   const router = useRouter();
   const navigation = useNavigation();
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container} edges={['bottom']}>
       <Appbar.Header>
         {/* <Appbar.BackAction onPress={() => router.back()} /> */}
         <Appbar.Action 
@@ -32,7 +33,7 @@ export default function AboutScreen() {
         </Card.Content>
       </Card>
       </View>
-    </View>
+    </SafeAreaView>
   );
 }
 

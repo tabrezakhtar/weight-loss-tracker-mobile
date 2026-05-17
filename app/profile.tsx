@@ -1,14 +1,15 @@
 import { DrawerActions } from '@react-navigation/native';
 import { useNavigation, useRouter } from 'expo-router';
-import { StyleSheet, View } from 'react-native';
+import { ScrollView, StyleSheet } from 'react-native';
 import { Appbar, Card, List, Text } from 'react-native-paper';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 export default function ProfileScreen() {
   const router = useRouter();
   const navigation = useNavigation();
 
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container} edges={['bottom']}>
       <Appbar.Header>
         <Appbar.Action 
           icon="menu" 
@@ -16,7 +17,7 @@ export default function ProfileScreen() {
         />
         <Appbar.Content title="Profile" />
       </Appbar.Header>
-      <View style={styles.content}>
+      <ScrollView style={styles.content}>
       <Card style={styles.card}>
         <Card.Content>
           <Text variant="bodyMedium">
@@ -25,19 +26,17 @@ export default function ProfileScreen() {
         </Card.Content>
       </Card>
       <List.Section>
-        <List.Item
-          title="Name"
-          description="Your name"
-          left={props => <List.Icon {...props} icon="account" />}
-        />
-        <List.Item
-          title="Email"
-          description="Your email"
-          left={props => <List.Icon {...props} icon="email" />}
-        />
+        {Array.from({ length: 50 }, (_, i) => i + 1).map((num) => (
+          <List.Item
+            key={num}
+            title={`Item ${num}`}
+            description={`This is item number ${num}`}
+            left={props => <List.Icon {...props} icon="star" />}
+          />
+        ))}
       </List.Section>
-      </View>
-    </View>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 

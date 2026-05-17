@@ -19,19 +19,19 @@ export default function AboutScreen() {
         <Appbar.Content title="About" />
       </Appbar.Header>
       <View style={styles.content}>
-      <Card style={styles.card}>
-        <Card.Content>
-          <Text variant="bodyMedium" style={styles.text}>
-            Weight Loss Tracker Mobile App
-          </Text>
-          <Text variant="bodySmall" style={styles.text}>
-            Version 1.0.0
-          </Text>
-          <Text variant="bodySmall" style={styles.text}>
-            Built with React Native and React Native Paper
-          </Text>
-        </Card.Content>
-      </Card>
+        <Card style={styles.card}>
+            <Card.Content>
+            <Text variant="bodyMedium" style={styles.text}>
+                Weight Loss Tracker Mobile App
+            </Text>
+            <Text variant="bodySmall" style={styles.text}>
+                Version 1.0.0
+            </Text>
+            <Text variant="bodySmall" style={styles.text}>
+                Built with React Native and React Native Paper
+            </Text>
+            </Card.Content>
+        </Card>
       </View>
     </SafeAreaView>
   );
@@ -40,7 +40,7 @@ export default function AboutScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#ff0000',
   },
   content: {
     flex: 1,
